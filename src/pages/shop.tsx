@@ -10,7 +10,7 @@ const Shop: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Uranus - Shop</title>
+        <title>Venus - Shop</title>
       </Head>
       <Filters />
       <Products products={products} />

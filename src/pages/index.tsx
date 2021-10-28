@@ -5,7 +5,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Uranus</title>
+        <title>Venus</title>
       </Head>
       <h1>Home</h1>
     </div>

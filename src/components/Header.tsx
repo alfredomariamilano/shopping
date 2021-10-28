@@ -77,7 +77,9 @@ const SearchButton = styled.button`
 const Logo = () => {
   return (
     <Section>
-      <h1 style={{ margin: 0, lineHeight: 1 }}>Uranus</h1>
+      <NextLink href="/">
+        <h1 style={{ margin: 0, lineHeight: 1 }}>Venus</h1>
+      </NextLink>
     </Section>
   )
 }
@@ -95,7 +97,7 @@ const Search = () => {
     <SearchContainer>
       <SearchForm onSubmit={onSubmit}>
         <SearchInput
-          placeholder="Search Uranus"
+          placeholder="Search Venus"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />

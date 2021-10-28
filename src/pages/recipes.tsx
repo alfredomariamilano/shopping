@@ -5,7 +5,7 @@ const Recipes: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Uranus - Recipes</title>
+        <title>Venus - Recipes</title>
       </Head>
       <h1>Recipes</h1>
     </div>

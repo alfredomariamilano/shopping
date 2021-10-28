@@ -5,7 +5,7 @@ const Profile: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Uranus - Profile</title>
+        <title>Venus - Profile</title>
       </Head>
       <h1>Profile</h1>
     </div>
