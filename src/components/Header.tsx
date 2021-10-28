@@ -11,7 +11,7 @@ import {
   faShoppingCart,
   faArrowRight,
 } from '@fortawesome/free-solid-svg-icons'
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { useAppDispatch, useAppSelector } from '~/store/hooks'
 import { setSearch as setSearchAction } from '~/store/reducers/products'
 import { useRouter } from 'next/router'
@@ -179,11 +179,22 @@ const CartDrawerHeader = styled.header`
 const CartDrawer = () => {
   const cartProducts = useGetCartProducts()
   const toggleOpenCart = useToggleOpenCart()
-  const cartItemsLength = useAppSelector(({ cart }) => {
-    return Object.values(cart.items).reduce((length, quantity) => {
+  const cartItems = useAppSelector(({ cart }) => cart.items)
+  const cartItemsLength = useMemo(() => {
+    return Object.values(cartItems).reduce((length, quantity) => {
       return length + quantity
     }, 0)
-  })
+  }, [cartItems])
+  const cartTotal = useMemo(() => {
+    return Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+    }).format(
+      cartProducts.reduce((total, product) => {
+        return total + product.price * cartItems[product.productId.value]
+      }, 0) / 100
+    )
+  }, [cartItems, cartProducts])
 
   return (
     <CartDrawerContainer>
@@ -198,6 +209,7 @@ const CartDrawer = () => {
         </CartDrawerButton>
       </CartDrawerHeader>
       <div>
+        {`Total: ${cartTotal}`}
         <Products products={cartProducts} />
       </div>
     </CartDrawerContainer>

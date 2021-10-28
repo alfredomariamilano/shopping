@@ -1,3 +1,20 @@
+# [Live Preview](https://venusshop.netlify.app)
+
+# Things I would do or do better with more time
+
+- General refactoring and splitting components in separate files
+- Pagination/infinite scroll for the products
+- Better filters (forgot a button as well, I guess to confirm the filter selection)
+- Missing button in the header
+- The products in the cart to have slightly different style than the products in the shop (smaller image, less details)
+- Show the total in the cart
+- Use the actual icons (they are separate vectors in Figma, which is something I wouldn't have in a real use case)
+- Light and subtle animations for user feedback (cart drawer sliding in and out)
+
+# Full disclosure
+
+I used a template to kickstart the project, instructions to run it are below.
+
 # Redux Toolkit TypeScript Example
 
 This example shows how to integrate Next.js with [Redux Toolkit](https://redux-toolkit.js.org).
