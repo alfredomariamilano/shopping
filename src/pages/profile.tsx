@@ -1,15 +1,15 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
-const Home: NextPage = () => {
+const Profile: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Uranus</title>
+        <title>Uranus - Profile</title>
       </Head>
-      <h1>Home</h1>
+      <h1>Profile</h1>
     </div>
   )
 }
 
-export default Home
+export default Profile
